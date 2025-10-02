@@ -1,0 +1,27 @@
+.main-pages-container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.utility-section {
+    max-width: 1152px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1280px) {
+    .utility-section {
+        max-width: 1024px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .utility-section {
+        max-width: 768px;
+        width: 100%;
+    }
+}

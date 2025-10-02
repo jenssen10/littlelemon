@@ -1,0 +1,272 @@
+.contact-form-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    border-radius: 20px;
+}
+
+.contactme-container {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 20px;
+    box-sizing: border-box;
+
+    .contactme-head {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        span {
+            color: #2c2c2c;
+        }
+    
+        h2 {
+            font-size: 5rem;
+            line-height: 4.25rem;
+            font-weight: 900;
+            color: #fff;
+        }
+
+        p {
+            font-size: 3.5rem;
+            color: #fff;
+            line-height: 3.45rem;
+            font-weight: 200;
+        }
+    }
+
+    a {
+        color: #fff;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 340px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 24px 50px;
+    box-sizing: border-box;
+
+    fieldset {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border: none;
+
+        .form-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label[for="firstname"],
+        label[for="email"],
+        label[for="comment"],
+        label[for="enquiry"] {
+            width: 100%;
+            font-weight: 800;
+            font-size: 2rem;
+            text-transform: lowercase;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 4px 0;
+            font-size: 0.985rem;
+            border: none;
+            border-bottom: 1px solid #151312;
+            outline: none;
+        }
+
+        select {
+            width: 100%;
+            background-color: #fff;
+        }
+
+        textarea {
+            height: 70px;
+            resize: none;
+        }
+
+        
+        .enquiry-for {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            
+            .checkbox-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+                gap: 2px;
+                text-wrap: nowrap;
+
+                .checkbox-label {
+                    display: flex;
+
+                    input[type="checkbox"] {
+                        display: none;
+                    }
+
+                    .option-spans {
+                        font-size: 0.95rem;
+                        font-weight: 800;
+                        text-transform: lowercase;
+                        padding: 8px 12px;
+                        box-sizing: border-box;
+                        background-color: #151312;
+                        color: #fff;
+                        border: 2px solid #151312;
+                        border-radius: 8px;
+                        transition: all 0.4s;
+                        cursor: pointer;
+
+                        &.selected {
+                            background-color: #fff;
+                            color: #151312;
+                        }
+
+                        &.deselected {
+                            background-color: #151312;
+                            color: #fff;
+                        }
+
+                        &:hover {
+                            background-color: #fff;
+                            color: #151312;
+                        }
+                    }
+                }
+            }
+        }
+
+        button {
+            width: 100%;
+            margin-top: 12px;
+            padding: 5px 12px;
+            color: #fff;
+            background-color: #151312;
+            border: 2px solid #151312;
+            border-radius: 8px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 1.45rem;
+            font-weight: 800;
+            transition: all 0.4s;
+
+            &:hover {
+                background-color: #fff;
+                color: #151312;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .contact-form-wrapper {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0;
+        border: none;
+    }
+
+    .contactme-container {
+        padding: 0;
+
+        .contactme-head {
+            p {
+                display: none;
+            }
+        }
+
+        a {
+            display: none;
+        }
+    }
+
+    .contact-form {
+        max-width: none;
+    }
+}
+
+// @media (max-width: 1024px) { }
+
+@media (max-width: 768px) {
+    .contactme-container {
+        .contactme-head {
+            h2 {
+                font-size: 4.45rem;
+                line-height: 4.25rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .contact-form-wrapper {
+        gap: 20px;
+    }
+
+    .contactme-container {
+        .contactme-head {
+            h2 {
+                font-size: 2.45rem;
+                line-height: 2rem;
+            }
+        }
+    }
+
+    .contact-form {
+        fieldset {
+            label[for="firstname"],
+            label[for="email"],
+            label[for="comment"],
+            label[for="enquiry"] {
+                font-size: 1.45rem;
+            }
+
+            button {
+                font-size: 1.35rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 475px) {
+    .contact-form {
+        padding: 16px 32px;
+
+        fieldset {
+            .enquiry-for {
+                .checkbox-container {
+                    .checkbox-label {
+                        .option-spans {
+                            padding: 4px 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
