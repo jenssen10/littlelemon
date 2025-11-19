@@ -1,4 +1,12 @@
-return(<nav><ul>
+<div className={styles.gridContainer}>
+      <div className={styles.item}>1</div>
+      <div className={styles.item}>2</div>
+      <div className={styles.item}>3</div>
+      <div className={styles.item}>4</div>
+    </div>
+return(
+ 
+<nav><ul>
     <li><a href="Home.html">Home</a>
 </li>
     <li><a href="About.html">About</a>
@@ -12,3 +20,5 @@ return(<nav><ul>
     <li><a href="Login.html">Login</a>
 </li>
     </ul></nav>); 
+
+    
