@@ -1,0 +1,307 @@
+
+/* -------------------------------
+   GLOBAL RESET + BASE STYLES
+--------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Utility */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+/* -------------------------------
+   HEADER + NAVIGATION
+--------------------------------*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 180px;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  gap: 25px;
+  font-weight: 500;
+}
+
+.nav-list a {
+  padding: 5px 10px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.nav-list a:hover {
+  background: #f4ce14;
+  color: #000;
+}
+/* -------------------------------
+   HERO SECTION
+--------------------------------*/
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #495e57;
+  color: white;
+  padding: 60px 10%;
+}
+
+.hero-left {
+  flex: 1;
+  max-width: 450px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #f4ce14;
+}
+
+.hero h2 {
+  margin-top: 5px;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.hero p {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.hero-btn {
+  background: #f4ce14;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.hero-btn:hover {
+  background: #ffe970;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-img {
+  width: 260px;
+  height: 320px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+/* -------------------------------
+   SPECIALS SECTION
+--------------------------------*/
+.specials {
+  padding: 60px 10%;
+}
+
+.specials-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.specials-header h2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.specials-btn {
+  background: #f4ce14;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.specials-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Card styling */
+.special-card {
+  background: #edefee;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.special-card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.special-content {
+  padding: 20px;
+}
+
+.special-content h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.order-link {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #495e57;
+}
+/* -------------------------------
+   TESTIMONIALS SECTION
+--------------------------------*/
+.testimonials {
+  background: #fbdabb;
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.test-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.test-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: auto;
+  object-fit: cover;
+}
+
+.test-card h3 {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.test-card p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+/* -------------------------------
+   FOOTER
+--------------------------------*/
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 40px 10%;
+  background: #495e57;
+  color: white;
+  gap: 20px;
+}
+
+.footer-logo {
+  width: 150px;
+}
+
+.footer-nav h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-nav li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+/* -------------------------------
+   RESPONSIVE DESIGN
+--------------------------------*/
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .hero-right {
+    justify-content: center;
+  }
+
+  .specials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}

@@ -1,28 +1,33 @@
-<div className={styles.gridContainer}>
-      <div className={styles.item}>1</div>
-      <div className={styles.item}>2</div>
-      <div className={styles.item}>3</div>
-      <div className={styles.item}>4</div>
-    </div>
-return(<footer>
-<hr/>
-<menu>
-        
-<h3>Social Media Links</h3>
-<li><a href="https://github.com/jenssen10/littlelemon.git">GitHub</a></li>
-<li><a href="https://www.linkedin.com/in/jenssen-honore-a3b158241/">LinkedIn</a></li>
-<li><a href="https://www.facebook.com/">facebook</a></li>
+export default function Footer() {
+  return (
+    <footer className="footer">
 
-<h3>Contact Info</h3>
-<li><a href="Address.html">Address</a></li>
-<li><a href="Phone number.html">Phone Number</a></li>
-<li><a href="Email.html">Email</a></li>
-<h3>Doormat Navigation</h3>
-<li><a href="Home.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="menu.html">Menu</a></li>
-<li><a href="reservations.html">Reservations</a></li>
-<li><a href="order online.html">Order Online</a></li>
-<li><a href="login.html">Login</a></li>
-</menu>
-        </footer>); 
+      <img src="/logo.png" alt="Little Lemon Logo" className="footer-logo" />
+
+      <ul className="footer-nav">
+        <h4>Navigation</h4>
+        <li>Home</li>
+        <li>Menu</li>
+        <li>Reservations</li>
+        <li>Order Online</li>
+        <li>Login</li>
+      </ul>
+
+      <ul className="footer-nav">
+        <h4>Contact</h4>
+        <li>123 Chicago Avenue</li>
+        <li>+1 (312) 555-7890</li>
+        <li>info@littlelemon.com</li>
+      </ul>
+
+      <ul className="footer-nav">
+        <h4>Social Media</h4>
+        <li>Facebook</li>
+        <li>Instagram</li>
+        <li>Twitter</li>
+      </ul>
+<p>© 2025 little lemon restaraunt — All Rights Reserved.</p>
+    </footer>
+  );
+}
+

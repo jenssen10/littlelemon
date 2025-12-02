@@ -1,11 +1,24 @@
-import React from "react";
-import logo from "file:///C:/Users/jenss/Pictures/Logo.svg";
+// src/components/Header.jsx
+import { Link } from "react-router-dom";
+import logo from "../assets/Logo.svg";
 
-return(<header>Logo.svg
-     <div className={styles.gridContainer}>
-      <div className={styles.item}>1</div>
-      <div className={styles.item}>2</div>
-      <div className={styles.item}>3</div>
-      <div className={styles.item}>4</div>
-    </div>
-</header>);
+function Header() {
+  return (
+    <header className="header">
+      <img src={logo} className="logo" alt="Little Lemon Logo" />
+
+      <nav className="nav">
+        <ul className="nav-list">
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/menu">Menu</Link></li>
+          <li><Link to="/reservations">Reservations</Link></li>
+          <li><Link to="/order-online">Order Online</Link></li>
+          <li><Link to="/login">Login</Link></li>
+        </ul>
+      </nav>
+    </header>
+  );
+}
+
+export default Header;
